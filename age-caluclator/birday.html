@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Calculator</title>
+</head>
+<style>
+    /* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #307485;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #08abba;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#result {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  input[type="date"],
+  button {
+    width: 100%;
+  }
+}
+
+</style>
+<body>
+  <h1>Age Calculator</h1>
+  <label for="birthdate">Enter your birthdate:</label>
+  <input type="date" id="birthdate">
+  <button onclick="calculateAge()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateAge() {
+      const birthdateInput = document.getElementById("birthdate");
+      const birthdate = new Date(birthdateInput.value);
+      const currentYear = new Date().getFullYear();
+
+      // Set birthdate to this year
+      birthdate.setFullYear(currentYear);
+
+      // Calculate the time remaining
+      const currentTime = new Date();
+      const remainingTime = birthdate - currentTime;
+
+      if (remainingTime < 0) {
+        // If the birthday has already occurred this year, set it to next year
+        birthdate.setFullYear(currentYear + 1);
+      }
+
+      // Calculate the time remaining again after adjusting for next year
+      const nextBirthday = birthdate;
+      const remainingTimeNextYear = nextBirthday - currentTime;
+
+      // Calculate remaining months and days
+      const remainingMonths = nextBirthday.getMonth() - currentTime.getMonth();
+      const remainingDays = nextBirthday.getDate() - currentTime.getDate();
+
+      // Display the result
+      const resultElement = document.getElementById("result");
+      resultElement.innerHTML = `Your upcoming birthday is in ${remainingMonths} months and ${remainingDays} days.`;
+    }
+  </script>
+</body>
+</html>
