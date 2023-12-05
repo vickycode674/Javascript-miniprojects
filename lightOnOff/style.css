@@ -1,0 +1,19 @@
+.img{
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.main-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
