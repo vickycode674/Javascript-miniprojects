@@ -1,0 +1,180 @@
+<!-- Folder structure: javascript-galaxy/beginner/
+Files: beginner.html, beginner.css, beginner.js -->
+
+<!-- beginner.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner Concepts - JS Galaxy</title>
+  <link rel="stylesheet" href="beginner.css" />
+</head>
+<body>
+  <header>
+    🔰 JavaScript Galaxy: Beginner Concepts
+  </header>
+
+  <main class="concepts-container">
+    <h2>🚀 Take You Forward - Beginner Revision</h2>
+    <div class="concept-list">
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c1')">
+          1. var, let, const
+        </div>
+        <div class="concept-body" id="c1">
+          <p><strong>Description:</strong> Variable declarations and scope</p>
+          <p><strong>Interview Focus:</strong> What's the difference between them?</p>
+          <pre><code>var x = 10;
+let y = 20;
+const z = 30;</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c2')">
+          2. Data Types
+        </div>
+        <div class="concept-body" id="c2">
+          <p><strong>Description:</strong> Primitive data types</p>
+          <p><strong>Interview Focus:</strong> typeof null?</p>
+          <pre><code>console.log(typeof null); // "object"</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c3')">
+          3. Operators
+        </div>
+        <div class="concept-body" id="c3">
+          <p><strong>Description:</strong> +, -, ==, ===, &&</p>
+          <p><strong>Interview Focus:</strong> Difference between == and ===?</p>
+          <pre><code>console.log(2 == "2"); // true
+console.log(2 === "2"); // false</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c4')">
+          4. Control Flow
+        </div>
+        <div class="concept-body" id="c4">
+          <p><strong>Description:</strong> if, else, switch, loops</p>
+          <p><strong>Interview Focus:</strong> Predict flow</p>
+          <pre><code>if (true) {
+  console.log("Yes");
+} else {
+  console.log("No");
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c5')">
+          5. Functions
+        </div>
+        <div class="concept-body" id="c5">
+          <p><strong>Description:</strong> Declarations & arrow functions</p>
+          <p><strong>Interview Focus:</strong> Hoisting & scope</p>
+          <pre><code>function sayHi() { return "Hi"; }
+const sayBye = () => "Bye";</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c6')">
+          6. Scope
+        </div>
+        <div class="concept-body" id="c6">
+          <p><strong>Description:</strong> Global, local, block</p>
+          <p><strong>Interview Focus:</strong> Nested scopes</p>
+          <pre><code>let a = 10;
+function outer() {
+  let b = 20;
+  function inner() {
+    console.log(a, b);
+  }
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c7')">
+          7. Hoisting
+        </div>
+        <div class="concept-body" id="c7">
+          <p><strong>Description:</strong> Vars/functions are lifted</p>
+          <p><strong>Interview Focus:</strong> Is let hoisted?</p>
+          <pre><code>console.log(a); // undefined
+var a = 5;
+// let b; console.log(b); // ReferenceError</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c8')">
+          8. Truthy & Falsy
+        </div>
+        <div class="concept-body" id="c8">
+          <p><strong>Description:</strong> Boolean logic</p>
+          <p><strong>Interview Focus:</strong> What is falsy?</p>
+          <pre><code>Falsy: false, 0, '', null, undefined, NaN</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c9')">
+          9. Arrays
+        </div>
+        <div class="concept-body" id="c9">
+          <p><strong>Description:</strong> push, map, filter</p>
+          <p><strong>Interview Focus:</strong> map vs forEach</p>
+          <pre><code>[1,2,3].map(x => x*2);</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c10')">
+          10. Objects
+        </div>
+        <div class="concept-body" id="c10">
+          <p><strong>Description:</strong> Key-value storage</p>
+          <p><strong>Interview Focus:</strong> Object cloning</p>
+          <pre><code>const obj = { a: 1 };
+const copy = { ...obj };</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c11')">
+          11. DOM Manipulation
+        </div>
+        <div class="concept-body" id="c11">
+          <p><strong>Description:</strong> Access & modify DOM</p>
+          <p><strong>Interview Focus:</strong> Change button text</p>
+          <pre><code>document.querySelector("button").innerText = "Clicked!";</code></pre>
+        </div>
+      </div>
+
+      <div class="concept">
+        <div class="concept-title" onclick="toggleConcept('c12')">
+          12. Events
+        </div>
+        <div class="concept-body" id="c12">
+          <p><strong>Description:</strong> click, input, keydown</p>
+          <p><strong>Interview Focus:</strong> onclick vs addEventListener</p>
+          <pre><code>element.addEventListener("click", () => {});</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 JS Galaxy by Vivek</p>
+  </footer>
+
+  <script src="beginner.js"></script>
+</body>
+</html>
