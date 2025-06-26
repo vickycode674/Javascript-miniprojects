@@ -1,0 +1,38 @@
+h1{
+    font-size:50px;
+    margin-top:0px;
+    margin-bottom:20px;
+    }
+body{
+background-image:url("pic.jpg");
+}
+
+h2{
+font-size:80px;
+margin-top:0px;
+margin-bottom:20px;
+}
+#count-el{
+padding: 173px;
+}
+
+button{
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:white;
+    font-size: 48px;
+    font-weight: bold;
+    width: 300px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin:auto;
+}
+
+#increment-btn{
+background: darkred;
+}
+
+#save-btn{
+background: darkblue;
+}
