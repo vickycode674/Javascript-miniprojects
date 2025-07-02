@@ -1,0 +1,14 @@
+/react-learning-lab
+├── /src
+│   ├── /components       # Reusable UI (Button, Card, Modal, etc.)
+│   ├── /pages            # Routing pages (Home, About, Auth, Dashboard etc.)
+│   ├── /context          # Context APIs for Theme/Auth
+│   ├── /redux            # Redux slice setup (cart, auth etc.)
+│   ├── /hooks            # Custom hooks (useToggle, useFetch etc.)
+│   ├── /utils            # Debounce, helpers, validations
+│   ├── /services         # API calls (axios/tanstack/react-query)
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.js    # If using Tailwind
+├── package.json
+└── README.md
